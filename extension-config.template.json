@@ -1,0 +1,9 @@
+{
+  "_comment": "Copy these values into Leetcode-To-Github extension Settings (extension icon → Settings)",
+  "githubUsername": "YOUR_GITHUB_USERNAME",
+  "repositoryName": "git_leetcode_streak",
+  "defaultPath": "solutions/<DIFFICULTY>",
+  "defaultFileName": "<PROBLEM_NO>-<PROBLEM_NAME>.<LANGUAGE>",
+  "defaultCommitMessage": "Solve: <PROBLEM_NO>. <PROBLEM_NAME> (<DIFFICULTY>)",
+  "defaultContent": "<!--\nProblem: <PROBLEM_NAME>\nDifficulty: <DIFFICULTY>\nURL: <PROBLEM_URL>\nDate: <DATE>\nLanguage: <LANGUAGE>\n-->\n\n<SOLUTION_CODE>"
+}

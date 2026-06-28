@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets — never commit tokens
+.env
+*.token
+secrets.json
+github-token.txt
+
+# Extension source (cloned by scripts/setup-extension.ps1)
+extension/leetcode-to-github/
+
+# Logs
+*.log
