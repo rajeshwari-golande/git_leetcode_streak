@@ -1,0 +1,24 @@
+// Pattern: Kadane's
+// Difficulty: Easy
+// Problem: 918. Maximum Sum Circular Subarray
+// Link: https://leetcode.com/problems/maximum-sum-circular-subarray
+
+class Solution:
+    def maxSubarraySumCircular(self, nums: List[int]) -> int:
+        n=len(nums)
+        ans=float('-inf')
+        subarray_sum=float('-inf')
+        total_sum=0
+        min_subarray_sum=float('inf')
+        max_subarray_sum=float('-inf')
+        minans_subarray_sum=float('inf')
+        for i in range(n):
+            subarray_sum=max(nums[i],subarray_sum+nums[i])
+            max_subarray_sum=max(subarray_sum,max_subarray_sum)
+            min_subarray_sum=min(min_subarray_sum+nums[i],nums[i])
+            minans_subarray_sum=min(minans_subarray_sum,min_subarray_sum)
+            total_sum+=nums[i]
+        if total_sum-minans_subarray_sum==0:
+            return max_subarray_sum
+        return max(max_subarray_sum,total_sum-minans_subarray_sum)
+        
