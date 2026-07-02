@@ -1,0 +1,21 @@
+// Pattern: Kadane's
+// Difficulty: Medium
+// Problem: 1749. Maximum Absolute Sum of Any Subarray
+// Link: https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray
+
+class Solution:
+    def maxAbsoluteSum(self, nums: List[int]) -> int:
+        #kadane's algorithm as the keywords: subarray , and there are negetive numbers
+        n=len(nums)
+        ans=float('-inf')
+        normal_sum=float('-inf')
+        most_negetive_sum=float('inf')
+        for i in range(n):
+            normal_sum=max(normal_sum+nums[i],nums[i])
+            most_negetive_sum=min(most_negetive_sum+nums[i],nums[i])
+            ans=max(ans,abs(normal_sum),abs(most_negetive_sum))
+        return ans
+           
+
+
+        
