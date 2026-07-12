@@ -1,0 +1,23 @@
+// Pattern: CHANGE_ME
+// Difficulty: Easy
+// Problem: 1331. Rank Transform of an Array
+// Link: https://leetcode.com/problems/rank-transform-of-an-array
+
+class Solution:
+    def arrayRankTransform(self, arr: List[int]) -> List[int]:
+        n=len(arr)
+        rank=dict()
+        ans=[0]*n
+        arr1=sorted(arr)
+        cnt=1
+        for number in arr1:
+            if number not in rank :
+                rank[number]=cnt
+                cnt+=1
+        for i in range(n):
+            ans[i]=rank[arr[i]]
+        return ans
+
+
+
+        
