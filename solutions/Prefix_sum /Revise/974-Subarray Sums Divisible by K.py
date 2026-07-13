@@ -1,4 +1,4 @@
-// Pattern: prefix sum
+// Pattern: prefix_sum 
 // Difficulty: Medium
 // Problem: 974. Subarray Sums Divisible by K
 // Link: https://leetcode.com/problems/subarray-sums-divisible-by-k
