@@ -1,0 +1,12 @@
+// Pattern: CHANGE_ME
+// Difficulty: Easy
+// Problem: 1979. Find Greatest Common Divisor of Array
+// Link: https://leetcode.com/problems/find-greatest-common-divisor-of-array
+
+import math
+
+
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        mx, mn = max(nums), min(nums)
+        return math.gcd(mx, mn)
