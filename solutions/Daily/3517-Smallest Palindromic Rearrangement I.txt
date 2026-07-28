@@ -1,0 +1,14 @@
+// Pattern: CHANGE_ME
+// Difficulty: Medium
+// Problem: 3517. Smallest Palindromic Rearrangement I
+// Link: https://leetcode.com/problems/smallest-palindromic-rearrangement-i
+
+class Solution:
+    def smallestPalindrome(self, s: str) -> str:
+        partition = len(s) // 2
+
+        base = sorted(s[:partition])
+        mid = [s[partition]] if len(s) % 2 == 1 else []
+        reversed_base = base[::-1]
+
+        return "".join(base + mid + reversed_base)
