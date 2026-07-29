@@ -1,0 +1,21 @@
+// Pattern: dict pattern
+// Difficulty: Easy
+// Problem: 409. Longest Palindrome
+// Link: https://leetcode.com/problems/longest-palindrome
+
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        count_occurance={}
+        for ch in s:
+            count_occurance[ch]=count_occurance.get(ch,0)+1
+        longest_len=0
+        occurance_one=0
+        for key,value in count_occurance.items():
+            if count_occurance[key]%2==0:
+                longest_len+=value
+            else: 
+                longest_len+=value-1
+                occurance_one=1
+        return longest_len+occurance_one
+
+        
