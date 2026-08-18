@@ -1,0 +1,42 @@
+// Pattern: CHANGE_ME
+// Difficulty: Easy
+// Problem: 3471. Find the Largest Almost Missing Integer
+// Link: https://leetcode.com/problems/find-the-largest-almost-missing-integer
+
+class Solution:
+    def largestInteger(self, nums: List[int], k: int) -> int:
+        n=len(nums)
+        if n==0 :
+            return nums[0]
+        cnt_first=0
+        cnt_last=0
+        cnt=dict()
+        largest_integer=(-1)
+        if k==n:
+            return max(nums)
+        if  k==1:
+            for i in range(n):
+                cnt[nums[i]]=cnt.get(nums[i],0)+1
+            for num,value in cnt.items():
+                if value==1:
+                    largest_integer=max(largest_integer,num)
+            return largest_integer
+        for i in range(n):
+            if nums[i]==nums[0]:
+                cnt_first+=1
+            if nums[i]==nums[-1]:
+                cnt_last+=1
+        if cnt_first==1 and cnt_last==1:
+            return max(nums[0],nums[-1])
+        elif cnt_first==1:
+            return nums[0]
+        elif cnt_last==1:
+            return nums[-1]
+        else:
+            return (-1)
+
+
+
+
+
+        
