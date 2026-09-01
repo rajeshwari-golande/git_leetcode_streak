@@ -1,4 +1,4 @@
-// Pattern: nice algo to understand the workflow
+// Pattern: this is not exactly a binary search question , but a similar pattern
 // Difficulty: Medium
 // Problem: 240. Search a 2D Matrix II
 // Link: https://leetcode.com/problems/search-a-2d-matrix-ii
@@ -18,6 +18,8 @@ class Solution:
                 high=high-1
         return False
 
+# TC=O(m+n)	
+# SC=O(1)
 
 
 
