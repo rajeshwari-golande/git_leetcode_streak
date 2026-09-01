@@ -2,7 +2,7 @@
 // Difficulty: Medium
 // Problem: 74. Search a 2D Matrix
 // Link: https://leetcode.com/problems/search-a-2d-matrix
-
+//TC=O(log(mn))
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         m=len(matrix)
