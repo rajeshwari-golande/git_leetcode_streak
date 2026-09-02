@@ -1,0 +1,8 @@
+// Pattern: weirdly faltu question
+// Difficulty: Easy
+// Problem: 3875. Construct Uniform Parity Array I
+// Link: https://leetcode.com/problems/construct-uniform-parity-array-i
+
+class Solution:
+    def uniformArray(self, nums1: list[int]) -> bool:
+        return True
