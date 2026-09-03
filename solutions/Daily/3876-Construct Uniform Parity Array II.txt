@@ -1,0 +1,17 @@
+// Pattern: CHANGE_ME
+// Difficulty: Medium
+// Problem: 3876. Construct Uniform Parity Array II
+// Link: https://leetcode.com/problems/construct-uniform-parity-array-ii
+
+class Solution:
+    def uniformArray(self, nums1: list[int]) -> bool:
+        mn = nums1[0]
+        hasOdd = False
+        for v in nums1:
+            if v < mn:
+                mn = v
+            if v & 1:
+                hasOdd = True
+        if mn & 1:
+            return True
+        return not hasOdd
