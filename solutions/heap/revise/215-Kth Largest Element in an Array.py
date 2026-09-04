@@ -12,4 +12,7 @@ class Solution:
             if len(heap)>k:
                 heapq.heappop(heap)
         return heap[0]
-        
+
+# | Problem          | Heap used | Heap size |           Time |    Space |
+# | ---------------- | --------- | --------: | -------------: | -------: |
+# | **Kth Largest**  | Min heap  |       `k` | **O(n log k)** | **O(k)** |
