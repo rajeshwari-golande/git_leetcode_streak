@@ -1,4 +1,4 @@
-// Pattern: easy-->greedy pattern
+// Pattern: easy greedy  pattern
 // Difficulty: Easy
 // Problem: 1046. Last Stone Weight
 // Link: https://leetcode.com/problems/last-stone-weight
@@ -20,6 +20,7 @@ class Solution:
             if first_largest!=second_largest:
                 heapq.heappush(heap,-(first_largest-second_largest))
 
-
+# Time: O(n log n)
+# Space: O(n)
 
         
