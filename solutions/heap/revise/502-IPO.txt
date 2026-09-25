@@ -1,0 +1,23 @@
+// Pattern: nice way to understand about the poping logic
+// Difficulty: Hard
+// Problem: 502. IPO
+// Link: https://leetcode.com/problems/ipo
+
+class Solution:
+    def findMaximizedCapital(self, k: int, w: int, profits: list[int], capital: list[int]) -> int:
+        heap=[]
+        n=len(profits)
+        combine_sorted=sorted(zip(capital,profits))
+        p=[pair[1] for pair in combine_sorted]
+        c=[pair[0] for pair in combine_sorted]
+        i=0
+        while(k):
+            while i<n and c[i]<=w :
+                heapq.heappush(heap,-p[i])
+                i+=1
+            if not heap:
+                break
+            w-=heapq.heappop(heap)
+            k-=1
+            
+        return w
