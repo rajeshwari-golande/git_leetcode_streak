@@ -1,4 +1,4 @@
-// Pattern: nice one 
+// Pattern: CHANGE_ME
 // Difficulty: Medium
 // Problem: 17. Letter Combinations of a Phone Number
 // Link: https://leetcode.com/problems/letter-combinations-of-a-phone-number
@@ -30,4 +30,12 @@ class Solution:
         ans=[]
         return self.generate(0,"",digits,ans)
 
+
+
+# | Type | Complexity | Meaning |
+# |---|---|---|
+# | **Time** | **`O(4^n × n)`** | Up to `4^n` combinations, each of length `n` |
+# | **Output Space** | **`O(4^n × n)`** | Store all combinations |
+# | **Recursion Space** | **`O(n)`** | Maximum recursion depth |
+# | **Total Space** | **`O(4^n × n)`** | Output dominates |
         
