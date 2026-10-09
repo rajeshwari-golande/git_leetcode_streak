@@ -21,4 +21,5 @@ class Solution:
         inorder(root)
         return result
 
-        
+# TC=O(n) , n=no. of nodes
+# SC=(O(h) , h=height of the tree 
