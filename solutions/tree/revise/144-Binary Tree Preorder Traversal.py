@@ -20,4 +20,6 @@ class Solution:
             preorder(root.right)
         preorder(root)
         return ans
-        
+
+# TC=O(n) , n=no. of nodes
+# SC=(O(h) , h=height of the tree
