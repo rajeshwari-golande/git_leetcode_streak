@@ -1,4 +1,4 @@
-// Pattern: CHANGE_ME
+// Pattern: Both solutions  -- > for  BFS ---> queue and the recursion
 // Difficulty: Medium
 // Problem: 102. Binary Tree Level Order Traversal
 // Link: https://leetcode.com/problems/binary-tree-level-order-traversal
@@ -10,6 +10,8 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+
+#queue solution
     def levelOrder(self, root: TreeNode | None) -> list[list[int]]:
         if not root:
             return []
@@ -27,4 +29,25 @@ class Solution:
                     q.append(node.right)
             result.append(level)
         return result       
-        
+# using queue: -->
+# Time complexity: (O(n)) — every node is removed from the queue and processed exactly once.
+# Space complexity: (O(n)) — the queue can hold nodes from a level, and result stores all node values.
+
+
+
+    def levelOrder(self, root: TreeNode | None) -> list[list[int]]:
+        result=[]
+        def dfs(node,level):
+            if not node:
+                return
+            if level == len(result):
+                result.append([])
+            result[level].append(node.val)
+            dfs(node.left,level+1)
+            dfs(node.right,level+1)
+        dfs(root,0)
+        return result
+# Complexity for recursion
+# Time	: (O(n))
+# Auxiliary space, excluding output:	(O(h))
+# Total space, including output: (O(n))
