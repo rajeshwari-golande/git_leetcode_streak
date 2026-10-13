@@ -10,6 +10,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    #dfs:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
             return None
@@ -20,4 +21,27 @@ class Solution:
         self.invertTree(root.right)
         return root
 
+    #bfs
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return None
+        q=deque([root])
+        while q:
+            for _  in range(len(q)):
+                node=q.popleft()
+                temp=node.right
+                node.right=node.left
+                node.left=temp
+                if node.right:
+                    q.append(node.right)
+                if node.left:
+                    q.append(node.left)
+        return root       
+                
+
+# Complexity	             DFS (Recursion)	BFS (Queue)
+# Time	                     (O(n))	             (O(n))
+# Auxiliary space           	(O(h))	         (O(n))
+# Worst-case auxiliary space	 (O(n))  	      (O(n))
+# Balanced tree space	        (O(log n))    	  (O(n))
         
