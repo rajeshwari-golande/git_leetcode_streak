@@ -1,0 +1,53 @@
+// Pattern: CHANGE_ME
+// Difficulty: Easy
+// Problem: 653. Two Sum IV - Input is a BST
+// Link: https://leetcode.com/problems/two-sum-iv-input-is-a-bst
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    #two BST iterator solutin pending
+
+
+    #iterative BFS :
+    def findTarget(self, root: Optional[TreeNode], k: int) -> bool:
+        if not root:
+            return False
+        seen=set()
+        q=deque([root])
+        while q:
+            node=q.popleft()
+            complement=k-node.val
+            if complement in seen:
+                return True
+            seen.add(node.val)
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        return False
+    
+
+    #recursion DFS-->
+    # def findTarget(self, root: Optional[TreeNode], k: int) -> bool:
+    #     seen=set()
+    #     def dfs(node):
+    #         if not node:
+    #             return False
+    #         complement=k-node.val
+    #         if complement in seen:
+    #             return True
+    #         seen.add(node.val)
+    #         return dfs(node.left) or dfs(node.right)
+    #     return dfs(root)
+
+
+# Approach	Time	Auxiliary space	Verdict
+# BFS + Set	\(O(n)\)	\(O(n)\)	Excellent, iterative
+# DFS + Set	\(O(n)\)	\(O(n)\)	Excellent, concise
+# Two BST iterators	\(O(n)\)	\(O(h)\)	Best space efficiency
+        
