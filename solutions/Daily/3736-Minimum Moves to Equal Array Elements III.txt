@@ -1,0 +1,9 @@
+// Pattern: CHANGE_ME
+// Difficulty: Easy
+// Problem: 3736. Minimum Moves to Equal Array Elements III
+// Link: https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii
+
+class Solution:
+    def minMoves(self, nums: List[int]) -> int:
+        mx = max(nums)
+        return sum(mx - x for x in nums)
