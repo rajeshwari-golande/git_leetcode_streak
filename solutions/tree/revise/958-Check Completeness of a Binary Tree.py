@@ -46,11 +46,11 @@ class Solution:
         return dfs(root,0)
 
 
-Complexity	    Iterative BFS	Recursive DFS (Indexing)
-Time	        O(N)	        O(N)
-Auxiliary Space	O(N)	        O(H)
-Data Structure	Queue (deque)	Recursion stack
-Traversals	        1	        2 (Node counting + DFS)
+# Complexity	    Iterative BFS	Recursive DFS (Indexing)
+# Time	        O(N)	        O(N)
+# Auxiliary Space	O(N)	        O(H)
+# Data Structure	Queue (deque)	Recursion stack
+# Traversals	        1	        2 (Node counting + DFS)
 
 
         
